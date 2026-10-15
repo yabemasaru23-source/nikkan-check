@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>右腕との相性チェック ― あなたはホンダ型？ソニー型？｜経営と陰陽五行</title>
+<meta name="description" content="ふたりの生年月日を入れるだけで、陰陽五行の「組み合わせの型」がわかる無料チェック。アクセル型（ソニー型）、ブレーキ型（ホンダ型）など5つの型と、経営での活かし方がわかります。">
+<link rel="canonical" href="https://yabemasaru23-source.github.io/nikkan-check/aisho.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="右腕との相性チェック ― あなたはホンダ型？ソニー型？">
+<meta property="og:description" content="ふたりの生年月日で、組み合わせの型と活かし方がわかる無料チェック。">
+<meta property="og:url" content="https://yabemasaru23-source.github.io/nikkan-check/aisho.html">
+<meta property="og:image" content="https://yabemasaru23-source.github.io/nikkan-check/ogp-aisho.png">
+<meta property="og:site_name" content="営業革命！売上倍増コンテンツ集">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@600;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5efe3; --paper: #fffdf8; --sunk: #ece4d4; --ink: #26221d; --ink-soft: #5e564c; --line: #d8cdb9;
+  --shu: #c03430; --shu-soft: #f6e0dc;
+  --moku: #2d7a4a; --ka: #c03430; --do: #a87018; --kin: #5d6a7c; --sui: #2854a0;
+  --mincho: "Zen Old Mincho", "Yu Mincho", serif;
+  --gothic: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--gothic); font-size: 17px; line-height: 1.85; }
+.wrap { max-width: 680px; margin: 0 auto; padding: 0 16px 64px; }
+header { text-align: center; padding: 36px 0 8px; }
+.kicker { display: inline-block; padding: 4px 16px; border: 1.5px solid var(--shu); border-radius: 999px; color: var(--shu); font-weight: 900; font-size: .85rem; letter-spacing: .12em; }
+h1 { font-family: var(--mincho); font-weight: 900; font-size: clamp(1.7rem, 6.5vw, 2.5rem); line-height: 1.4; margin: 14px 0 8px; }
+h1 em { font-style: normal; color: var(--shu); }
+.lead { color: var(--ink-soft); margin: 0 0 24px; }
+
+.form { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 22px 18px; }
+.who { margin-bottom: 18px; }
+.who:last-of-type { margin-bottom: 0; }
+.who p { margin: 0 0 8px; font-weight: 900; display: flex; align-items: center; gap: 8px; }
+.who p i { font-style: normal; display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: #fff; font-size: .85rem; }
+.who.b p i { background: var(--shu); }
+.selects { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 10px; }
+select, input[type=text] { font: inherit; font-size: 1.05rem; padding: 10px 8px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); width: 100%; }
+input[type=text] { margin-top: 8px; }
+select:focus, input:focus, button:focus-visible, a:focus-visible { outline: 3px solid #2e5aa8; outline-offset: 2px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.go { margin-top: 20px; width: 100%; border: 0; cursor: pointer; font: inherit; font-weight: 900; font-size: 1.15rem; padding: 15px; border-radius: 999px; background: var(--shu); color: #fff; box-shadow: 0 5px 0 #8f231f; }
+.go:active { transform: translateY(2px); box-shadow: 0 3px 0 #8f231f; }
+.privacy { font-size: .78rem; color: var(--ink-soft); margin: 12px 0 0; text-align: center; }
+
+.result { margin-top: 28px; }
+.result[hidden] { display: none; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 24px 20px; margin-bottom: 16px; }
+.duo { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px; text-align: center; }
+.duo .p b { display: grid; place-items: center; width: 96px; height: 96px; margin: 0 auto 6px; border-radius: 18px; color: #fff; font-family: var(--mincho); font-weight: 900; font-size: 66px; line-height: 1; }
+.duo .p span { display: block; font-weight: 900; }
+.duo .p small { display: block; color: var(--ink-soft); font-size: .85rem; }
+.duo .arrow { font-family: var(--mincho); font-weight: 900; font-size: 1rem; color: var(--ink-soft); line-height: 1.3; }
+.duo .arrow em { display: block; font-style: normal; font-size: 2rem; color: var(--shu); }
+.type { text-align: center; margin-top: 18px; padding-top: 18px; border-top: 1px dashed var(--line); }
+.type .tag { display: inline-block; background: var(--shu); color: #fff; font-weight: 900; padding: 4px 14px; border-radius: 999px; font-size: .9rem; }
+.type h2 { font-family: var(--mincho); font-weight: 900; font-size: 2rem; margin: 10px 0 4px; }
+.type p { margin: 0; color: var(--ink-soft); }
+h3 { font-family: var(--mincho); font-weight: 900; font-size: 1.25rem; margin: 0 0 12px; }
+dl { margin: 0; display: grid; gap: 12px; }
+dt { font-weight: 900; color: var(--shu); }
+dd { margin: 0; }
+.famous { background: var(--shu-soft); border-color: #e9b9b2; }
+.share { display: flex; gap: 10px; flex-wrap: wrap; }
+.share a, .share button { flex: 1; min-width: 140px; text-align: center; text-decoration: none; font: inherit; font-weight: 900; padding: 12px; border-radius: 999px; border: 0; cursor: pointer; color: #fff; }
+.share .x { background: #111; } .share .line { background: #06C755; } .share .copy { background: var(--ink-soft); }
+.next { text-align: center; }
+.next a { display: inline-block; margin-top: 8px; color: var(--shu); font-weight: 900; }
+.again { display: block; margin: 0 auto; background: none; border: 0; color: var(--ink-soft); text-decoration: underline; font: inherit; cursor: pointer; }
+.types { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; font-size: .92rem; }
+.types li { background: var(--bg); border-radius: 10px; padding: 8px 12px; }
+.types b { color: var(--shu); }
+.note-s { font-size: .78rem; color: var(--ink-soft); line-height: 1.7; }
+footer { text-align: center; font-size: .8rem; color: var(--ink-soft); padding: 20px 16px 40px; }
+@media (max-width: 420px) { .duo .p b { width: 80px; height: 80px; font-size: 54px; } .type h2 { font-size: 1.7rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="kicker">経営と陰陽五行 ｜ 無料チェック 第2弾</span>
+    <h1>あなたと右腕は、<br><em>ホンダ型</em>？ <em>ソニー型</em>？</h1>
+    <p class="lead">ふたりの生年月日を入れるだけ。<br>陰陽五行の「組み合わせの型」と、経営での活かし方がわかります。</p>
+  </header>
+
+  <form class="form" id="f">
+    <div class="who a">
+      <p><i>A</i>あなた</p>
+      <div class="selects">
+        <label><span class="sr">あなたの生まれ年</span><select id="ay"></select></label>
+        <label><span class="sr">月</span><select id="am"></select></label>
+        <label><span class="sr">日</span><select id="ad"></select></label>
+      </div>
+    </div>
+    <div class="who b">
+      <p><i>B</i>相手（右腕・社員・パートナーなど）</p>
+      <div class="selects">
+        <label><span class="sr">相手の生まれ年</span><select id="by"></select></label>
+        <label><span class="sr">月</span><select id="bm"></select></label>
+        <label><span class="sr">日</span><select id="bd"></select></label>
+      </div>
+      <label><span class="sr">相手の呼び名</span><input type="text" id="bn" maxlength="12" placeholder="相手の呼び名（なくてもOK）例：山田さん"></label>
+    </div>
+    <button class="go" type="submit">ふたりの相性を調べる</button>
+    <p class="privacy">入力した内容は、このページの中だけで計算します。どこにも送られません。</p>
+  </form>
+
+  <div class="result" id="result" hidden aria-live="polite">
+    <div class="card" id="main"></div>
+    <div class="card" id="detail"></div>
+    <div class="card famous" id="famous"></div>
+    <div class="card">
+      <h3>結果をシェアする</h3>
+      <div class="share">
+        <a class="x" id="shareX" target="_blank" rel="noopener">Xでシェア</a>
+        <a class="line" id="shareLine" target="_blank" rel="noopener">LINEで送る</a>
+        <button class="copy" type="button" id="copy">リンクをコピー</button>
+      </div>
+      <p class="note-s" style="margin-top:12px">シェアされるのは「型」の名前だけです。生年月日や呼び名は送られません。</p>
+    </div>
+    <div class="card next">
+      <h3>組む相手がわかったら、次は「いつ動くか」</h3>
+      <p style="margin:0">同じふたりでも、攻める年と整える年があります。<br>次回のnoteでは、あなたにとって「今年はどんな年か」を調べられるようにします。</p>
+      <a href="https://note.com/lucky_panda5334">連載「経営と陰陽五行」を読む →</a><br>
+      <a href="./">自分ひとりの日干チェックはこちら →</a>
+    </div>
+    <button class="again" type="button" id="again">別の組み合わせで調べる</button>
+  </div>
+
+  <div class="card" style="margin-top:28px">
+    <h3>5つの組み合わせの型</h3>
+    <ul class="types">
+      <li><b>アクセル型（ソニー型）</b>：あなたが生み出したものを、相手が形にする</li>
+      <li><b>育てられ型</b>：相手が、あなたに力を注いでくれる</li>
+      <li><b>ブレーキ型（ホンダ型）</b>：あなたが、相手を引きしめる</li>
+      <li><b>引きしめられ型</b>：相手が、あなたの暴走を止めてくれる</li>
+      <li><b>鏡型</b>：同じ五行。わかり合えるが、くせも同じ</li>
+    </ul>
+    <p class="note-s" style="margin:12px 0 0">※ どの型にも良い・悪いはありません。大事なのは使い方です。日干は生まれた日の「日柱」のいちばん上の字で、夜11時以降に生まれた方は、考え方によって翌日の字で見ることもあります。</p>
+  </div>
+</div>
+<footer>営業革命！売上倍増コンテンツ集 ｜ 経営と陰陽五行</footer>
+
+<script>
+(() => {
+  'use strict';
+  // 日干 = (1970-01-01 からの日数 + 7) mod 10。教材の検証用エンジンと 1900〜2050 年の全日付で一致を確認ずみ
+  const dayKan = (y, m, d) => (((Math.floor(Date.UTC(y, m - 1, d) / 864e5) + 7) % 10) + 10) % 10;
+  const KAN = [
+    ['甲', 'きのえ', '大樹'], ['乙', 'きのと', '草花'], ['丙', 'ひのえ', '太陽'], ['丁', 'ひのと', '灯火'], ['戊', 'つちのえ', '大山'],
+    ['己', 'つちのと', '田畑'], ['庚', 'かのえ', '刀剣'], ['辛', 'かのと', '宝石'], ['壬', 'みずのえ', '大海'], ['癸', 'みずのと', '雨露'],
+  ];
+  const ORDER = ['木', '火', '土', '金', '水'];   // 相生：木→火→土→金→水→木 ／ 相剋：木→土→水→火→金→木
+  const COLOR = { 木: 'var(--moku)', 火: 'var(--ka)', 土: 'var(--do)', 金: 'var(--kin)', 水: 'var(--sui)' };
+  const gyoOf = i => ORDER[Math.floor(i / 2)];
+  const inyoOf = i => (i % 2 === 0 ? '陽' : '陰');
+
+  const TYPES = {
+    accel: { name: 'アクセル型', alias: 'ソニー型', arrow: '生かす', line: 'あなたが生み出したものを、相手が形にする',
+      why: '五行の「助け合う関係（相生：そうしょう）」で、あなたの五行が相手の五行を生み出す組み合わせです。',
+      use: 'あなたがアイデア・方向・発信を担い、相手が実行・仕上げ・数字を担う。役割がこの向きにそろうと、ぐんぐん前に進みます。',
+      care: 'あなたが次々に出しすぎると、受け止める相手がパンクします。相手が受け止められる量を、ときどき確かめましょう。' },
+    nurture: { name: '育てられ型', alias: '', arrow: '育てられる', line: '相手が、あなたに力を注いでくれる',
+      why: '五行の「助け合う関係（相生）」で、相手の五行があなたの五行を生み出す組み合わせです。',
+      use: '相手を、相談役・知恵袋・応援団として頼る。迷ったときに話を聞いてもらうと、あなたの力が引き出されます。',
+      care: '甘えすぎると、相手ばかりが消耗します。「ありがとう」と、成果のおすそ分けを忘れずに。' },
+    brake: { name: 'ブレーキ型', alias: 'ホンダ型', arrow: '引きしめる', line: 'あなたが、相手を引きしめる',
+      why: '五行の「ブレーキをかけ合う関係（相剋：そうこく）」で、あなたの五行が相手の五行を押さえる組み合わせです。',
+      use: '持ち場をはっきり分けるのがコツ。あなたが方向を決め、相手が管理・守りを担うと、ぶつかる力が強さに変わります。',
+      care: 'あなたの言い方が、相手には思った以上にきつく届きがちです。相手の持ち場には口を出しすぎないこと。' },
+    checked: { name: '引きしめられ型', alias: '', arrow: '止めてもらう', line: '相手が、あなたの暴走を止めてくれる',
+      why: '五行の「ブレーキをかけ合う関係（相剋）」で、相手の五行があなたの五行を押さえる組み合わせです。',
+      use: '大事な決断の前に、相手の意見を聞く。あなたの勢いが行きすぎたとき、いちばん頼りになるブレーキ役です。',
+      care: '窮屈に感じることもありますが、それは守りの力。「止めてくれてありがとう」と言える関係が理想です。' },
+    mirror: { name: '鏡型', alias: '', arrow: '同じ五行', line: 'わかり合えるが、くせも同じ',
+      why: 'ふたりの五行が同じ組み合わせです。考え方や感じ方が近く、話が早く通じます。',
+      use: '役割をはっきり分けるか、ちがう五行の3人目を入れる。同じ強みを2倍にするより、足りない持ち味を補うほうが伸びます。',
+      care: '同じ方向に突っ走ったり、同じところでつまずいたりしがち。張り合いになると、どちらも引きません。' },
+  };
+  const INYO = {
+    '陽陽': 'どちらも「陽」。勢いは出ますが、ブレーキ役が足りなくなりがちです。',
+    '陰陰': 'どちらも「陰」。ていねいで堅実ですが、決断が遅れがちです。',
+    '陽陰': '「陽」と「陰」の組み合わせ。攻めと守りで、ペースはちがっても補い合えます。',
+  };
+
+  function relation(a, b) {
+    const x = ORDER.indexOf(gyoOf(a)), y = ORDER.indexOf(gyoOf(b));
+    if (x === y) return 'mirror';
+    if ((x + 1) % 5 === y) return 'accel';
+    if ((y + 1) % 5 === x) return 'nurture';
+    if ((x + 2) % 5 === y) return 'brake';
+    return 'checked';
+  }
+
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const opt = (sel, from, to, val, suffix) => { sel.innerHTML = ''; for (let i = from; i <= to; i++) sel.add(new Option(i + suffix, i, false, i === val)); };
+  const daysIn = (y, m) => new Date(Date.UTC(y, m, 0)).getUTCDate();
+  function setup(p, year) {
+    opt($(p + 'y'), 1900, 2050, year, '年'); opt($(p + 'm'), 1, 12, 1, '月');
+    const fill = () => { const n = daysIn(+$(p + 'y').value, +$(p + 'm').value); opt($(p + 'd'), 1, n, Math.min(+$(p + 'd').value || 1, n), '日'); };
+    fill(); $(p + 'y').addEventListener('change', fill); $(p + 'm').addEventListener('change', fill);
+  }
+  setup('a', 1975); setup('b', 1985);
+  const get = p => dayKan(+$(p + 'y').value, +$(p + 'm').value, +$(p + 'd').value);
+
+  function person(i, label) {
+    const [k, yomi, tatoe] = KAN[i];
+    return `<div class="p"><b style="background:${COLOR[gyoOf(i)]}">${k}</b><span>${esc(label)}</span><small>${k}（${yomi}）${tatoe}<br>${inyoOf(i)}の${gyoOf(i)}</small></div>`;
+  }
+
+  function show(a, b, bname) {
+    const r = relation(a, b), t = TYPES[r];
+    const inyo = inyoOf(a) === inyoOf(b) ? INYO[inyoOf(a) + inyoOf(b)] : INYO['陽陰'];
+    const partner = bname || '相手';
+    $('main').innerHTML = `
+      <div class="duo">${person(a, 'あなた')}<div class="arrow">${r === 'mirror' ? 'ふたりは<em>＝</em>' : 'あなたが<em>→</em>'}${t.arrow}</div>${person(b, partner)}</div>
+      <div class="type">${t.alias ? `<span class="tag">${t.alias}</span>` : ''}
+        <h2>${t.name}</h2><p>${t.line}</p></div>`;
+    $('detail').innerHTML = `
+      <h3>この組み合わせの活かし方</h3>
+      <dl>
+        <div><dt>どんな組み合わせ？</dt><dd>${t.why}</dd></div>
+        <div><dt>経営での活かし方</dt><dd>${t.use}</dd></div>
+        <div><dt>気をつけること</dt><dd>${t.care}</dd></div>
+        <div><dt>陰と陽のバランス</dt><dd>${inyo}</dd></div>
+      </dl>`;
+    const famous = {
+      accel: 'ソニーの井深大さん（丙＝太陽）と盛田昭夫さん（己＝田畑）が、この「アクセル型」でした。太陽が照らし、田畑が実らせて、世界に届けた組み合わせです。',
+      brake: 'ホンダの本田宗一郎さん（乙＝草花）と藤澤武夫さん（己＝田畑）が、この「ブレーキ型」でした。持ち場をはっきり分けて、ぶつかる力を強さに変えた組み合わせです。',
+    }[r] || 'ソニーの井深さんと盛田さんは「アクセル型」、ホンダの本田さんと藤澤さんは「ブレーキ型」でした。型はちがっても、どちらも世界的な会社を育てています。相性は「良い・悪い」ではなく、使い方しだいです。';
+    $('famous').innerHTML = `<h3>名コンビでいうと</h3><p style="margin:0">${famous}</p>`;
+
+    const url = location.origin + location.pathname;
+    const text = `わたしと右腕は「${t.name}${t.alias ? '（' + t.alias + '）' : ''}」でした。あなたの会社は？ #経営と陰陽五行`;
+    $('shareX').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url);
+    $('shareLine').href = 'https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text);
+    $('copy').onclick = () => {
+      (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject())
+        .then(() => { $('copy').textContent = 'コピーしました'; })
+        .catch(() => { prompt('このリンクをコピーしてください', url); });
+    };
+    $('result').hidden = false;
+    $('main').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  $('f').addEventListener('submit', e => { e.preventDefault(); show(get('a'), get('b'), $('bn').value.trim()); });
+  $('again').addEventListener('click', () => { $('result').hidden = true; $('copy').textContent = 'リンクをコピー'; $('f').scrollIntoView({ behavior: 'smooth' }); });
+  // テスト用に計算だけ取り出せるようにしておく
+  window.__aisho = { dayKan, relation };
+})();
+</script>
+</body>
+</html>
