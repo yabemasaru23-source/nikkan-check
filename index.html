@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>あなたの日干チェック ― 生年月日で10タイプの持ち味がわかる｜経営と陰陽五行</title>
+<meta name="description" content="生年月日を入れるだけで、陰陽五行の「日干（にっかん）」がわかる無料チェック。大樹・太陽・田畑など10タイプの持ち味とくせ、あなたの力を実らせてくれる相手、ホンダ・ソニーの名経営者との共通点がわかります。">
+<link rel="canonical" href="https://yabemasaru23-source.github.io/nikkan-check/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="あなたの日干チェック ― 天才のとなりには「田畑」がいる">
+<meta property="og:description" content="生年月日を入れるだけで、陰陽五行の10タイプの持ち味がわかる無料チェック。">
+<meta property="og:url" content="https://yabemasaru23-source.github.io/nikkan-check/">
+<meta property="og:image" content="https://yabemasaru23-source.github.io/nikkan-check/ogp.png">
+<meta property="og:site_name" content="営業革命！売上倍増コンテンツ集">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@600;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5efe3; --paper: #fffdf8; --sunk: #ece4d4; --ink: #26221d; --ink-soft: #5e564c; --line: #d8cdb9;
+  --shu: #c03430; --shu-soft: #f6e0dc;
+  --moku: #2d7a4a; --ka: #c03430; --do: #a87018; --kin: #5d6a7c; --sui: #2854a0;
+  --mincho: "Zen Old Mincho", "Yu Mincho", serif;
+  --gothic: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--gothic); font-size: 17px; line-height: 1.85; }
+.wrap { max-width: 680px; margin: 0 auto; padding: 0 16px 64px; }
+header { text-align: center; padding: 40px 0 8px; }
+header .cat { width: 84px; }
+.kicker { display: inline-block; margin-top: 10px; padding: 4px 16px; border: 1.5px solid var(--shu); border-radius: 999px; color: var(--shu); font-weight: 900; font-size: .85rem; letter-spacing: .12em; }
+h1 { font-family: var(--mincho); font-weight: 900; font-size: clamp(1.7rem, 6.5vw, 2.5rem); line-height: 1.4; margin: 14px 0 8px; }
+h1 em { font-style: normal; color: var(--shu); }
+.lead { color: var(--ink-soft); margin: 0 0 24px; }
+
+.form { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 22px 18px; }
+.form p { margin: 0 0 10px; font-weight: 700; }
+.selects { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 10px; }
+.selects label { display: grid; gap: 4px; font-size: .85rem; color: var(--ink-soft); }
+select { font: inherit; font-size: 1.1rem; padding: 10px 8px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); width: 100%; }
+select:focus, button:focus-visible, a:focus-visible { outline: 3px solid #2e5aa8; outline-offset: 2px; }
+.go { margin-top: 16px; width: 100%; border: 0; cursor: pointer; font: inherit; font-weight: 900; font-size: 1.15rem; padding: 15px; border-radius: 999px; background: var(--shu); color: #fff; box-shadow: 0 5px 0 #8f231f; }
+.go:active { transform: translateY(2px); box-shadow: 0 3px 0 #8f231f; }
+.privacy { font-size: .78rem; color: var(--ink-soft); margin: 12px 0 0; text-align: center; }
+
+.result { margin-top: 28px; }
+.result[hidden] { display: none; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 26px 20px; margin-bottom: 16px; }
+.hero { text-align: center; border-top: 8px solid var(--c); }
+.hero .label { font-weight: 700; color: var(--ink-soft); margin: 0; }
+.kan { display: grid; place-items: center; width: 132px; height: 132px; margin: 12px auto; border-radius: 20px; background: var(--c); color: #fff; font-family: var(--mincho); font-weight: 900; font-size: 92px; line-height: 1; }
+.yomi { font-weight: 900; font-size: 1.1rem; margin: 0; }
+.tatoe { font-family: var(--mincho); font-weight: 900; font-size: 2rem; margin: 4px 0 0; color: var(--c); }
+.gyo { margin: 4px 0 0; color: var(--ink-soft); }
+h2 { font-family: var(--mincho); font-weight: 900; font-size: 1.3rem; margin: 0 0 12px; }
+dl { margin: 0; display: grid; gap: 12px; }
+dt { font-weight: 900; color: var(--c); }
+dd { margin: 0; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pair div { background: var(--bg); border-radius: 14px; padding: 14px; }
+.pair b { display: block; font-size: .85rem; color: var(--ink-soft); }
+.pair .el { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; color: #fff; font-family: var(--mincho); font-weight: 900; font-size: 1.3rem; margin: 6px 6px 0 0; vertical-align: middle; }
+.pair span.names { font-weight: 900; }
+.pair p { margin: 6px 0 0; font-size: .9rem; color: var(--ink-soft); }
+.famous { background: var(--shu-soft); border-color: #e9b9b2; }
+.share { display: flex; gap: 10px; flex-wrap: wrap; }
+.share a, .share button { flex: 1; min-width: 140px; text-align: center; text-decoration: none; font: inherit; font-weight: 900; padding: 12px; border-radius: 999px; border: 0; cursor: pointer; color: #fff; }
+.share .x { background: #111; } .share .line { background: #06C755; } .share .copy { background: var(--ink-soft); }
+.more { text-align: center; }
+.more a { display: inline-block; margin-top: 6px; color: var(--shu); font-weight: 900; }
+.again { display: block; margin: 0 auto; background: none; border: 0; color: var(--ink-soft); text-decoration: underline; font: inherit; cursor: pointer; }
+.note-s { font-size: .78rem; color: var(--ink-soft); line-height: 1.7; }
+footer { text-align: center; font-size: .8rem; color: var(--ink-soft); padding: 20px 16px 40px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <svg class="cat" viewBox="0 0 120 120" role="img" aria-label="案内役のまあ先生">
+      <g stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 46 L26 10 L52 32 Z" fill="#fbf8f2" stroke="#26221d" stroke-width="3"/><path d="M30 38 L31 20 L45 32 Z" fill="#f2b7b0"/>
+        <path d="M98 46 L94 10 L68 32 Z" fill="#26221d" stroke="#26221d" stroke-width="3"/><path d="M90 38 L89 20 L75 32 Z" fill="#6a5a6e"/>
+        <clipPath id="h"><ellipse cx="60" cy="64" rx="42" ry="38"/></clipPath>
+        <ellipse cx="60" cy="64" rx="42" ry="38" fill="#fbf8f2"/>
+        <g clip-path="url(#h)"><path d="M60 20 C78 34 42 50 60 64 C78 78 42 94 60 108 L110 108 L110 20 Z" fill="#26221d"/></g>
+        <ellipse cx="60" cy="64" rx="42" ry="38" fill="none" stroke="#26221d" stroke-width="3"/>
+        <ellipse cx="42" cy="60" rx="7" ry="8" fill="#26221d"/><circle cx="44.5" cy="57" r="2.4" fill="#fff"/>
+        <ellipse cx="78" cy="60" rx="7" ry="8" fill="#f3d68d"/><ellipse cx="78" cy="60.5" rx="2.6" ry="6" fill="#26221d"/><circle cx="80" cy="57" r="1.8" fill="#fff"/>
+        <path d="M56 72 L64 72 L60 77 Z" fill="#e58a8a"/><path d="M60 77 q-5 6 -10 2 M60 77 q5 6 10 2" fill="none" stroke="#8a7f74" stroke-width="2.2"/>
+        <path d="M30 74 L12 70 M30 79 L13 82" stroke="#8a7f74" stroke-width="1.8"/><path d="M90 74 L108 70 M90 79 L107 82" stroke="#d6cfc4" stroke-width="1.8"/>
+        <ellipse cx="34" cy="70" rx="5" ry="3.2" fill="#f2b7b0" opacity=".8"/>
+        <path d="M36 98 q24 10 48 0" fill="none" stroke="#c03430" stroke-width="4"/><circle cx="60" cy="106" r="5.5" fill="#d9a441" stroke="#26221d" stroke-width="1.6"/>
+      </g>
+    </svg>
+    <br><span class="kicker">経営と陰陽五行 ｜ 無料チェック</span>
+    <h1>あなたの<em>日干</em>は、<br>10人のうちだれ？</h1>
+    <p class="lead">生年月日を入れるだけ。あなたの「主人公」の1文字と、<br>持ち味・くせ・力を実らせてくれる相手がわかります。</p>
+  </header>
+
+  <form class="form" id="f">
+    <p>生年月日を選んでください</p>
+    <div class="selects">
+      <label>年<select id="y" required></select></label>
+      <label>月<select id="m" required></select></label>
+      <label>日<select id="d" required></select></label>
+    </div>
+    <button class="go" type="submit">日干を調べる</button>
+    <p class="privacy">入力した生年月日は、このページの中だけで計算します。どこにも送られません。</p>
+  </form>
+
+  <div class="result" id="result" hidden aria-live="polite">
+    <div class="card hero" id="hero"></div>
+    <div class="card" id="detail"></div>
+    <div class="card" id="partners"></div>
+    <div class="card famous" id="famous"></div>
+    <div class="card">
+      <h2>結果をシェアする</h2>
+      <div class="share">
+        <a class="x" id="shareX" target="_blank" rel="noopener">Xでシェア</a>
+        <a class="line" id="shareLine" target="_blank" rel="noopener">LINEで送る</a>
+        <button class="copy" type="button" id="copy">リンクをコピー</button>
+      </div>
+      <p class="note-s" style="margin-top:12px">社員さんや家族にも送って、おたがいの日干を見くらべてみてください。</p>
+    </div>
+    <div class="card more">
+      <h2>もっと知りたい方へ</h2>
+      <p style="margin:0">日干の読み方、相性の考え方、経営への活かし方は、noteの連載で書いています。</p>
+      <a href="https://note.com/lucky_panda5334">連載「経営と陰陽五行」を読む →</a>
+    </div>
+    <button class="again" type="button" id="again">別の生年月日で調べる</button>
+  </div>
+
+  <p class="note-s" style="margin-top:28px">※ 日干は、生まれた日の「日柱（にっちゅう）」のいちばん上の字です。夜11時以降に生まれた方は、考え方によって翌日の字で見ることもあります。<br>※ 日干は自分を知るための入り口です。当たり外れより、「心当たり」を探してみてください。</p>
+</div>
+<footer>営業革命！売上倍増コンテンツ集 ｜ 経営と陰陽五行</footer>
+
+<script>
+(() => {
+  'use strict';
+  // 日干 = (1970-01-01 からの日数 + 7) を 10 で割った余り。
+  // 教材の検証用エンジン（verify/independent-engine.js）と 1900〜2050 年の全日付で一致を確認ずみ。
+  const dayKan = (y, m, d) => (((Math.floor(Date.UTC(y, m - 1, d) / 864e5) + 7) % 10) + 10) % 10;
+
+  const GYO = {
+    木: { color: 'var(--moku)', role: '始める人・開拓する人' },
+    火: { color: 'var(--ka)',   role: '盛り上げる人・伝える人' },
+    土: { color: 'var(--do)',   role: 'まとめる人・育てる人' },
+    金: { color: 'var(--kin)',  role: '決める人・仕組みをつくる人' },
+    水: { color: 'var(--sui)',  role: '考える人・企画する人' },
+  };
+  const ORDER = ['木', '火', '土', '金', '水'];               // 相生：木→火→土→金→水→木
+  const KAN = [
+    { k: '甲', yomi: 'きのえ',   gyo: '木', inyo: '陽', tatoe: '大樹',
+      good: 'まっすぐ上を目指す、ゆずれない信念。大きな木かげのように人をまもる面倒見のよさ',
+      kuse: '曲がることが苦手で、がんこ。方針転換が遅れやすい',
+      use:  'ぶれない理念を掲げる役。細かい軌道修正は、しなやかな人に任せる' },
+    { k: '乙', yomi: 'きのと',   gyo: '木', inyo: '陰', tatoe: '草花',
+      good: '風にゆれても折れない、しなやかさ。人とつながり、まわりと合わせる力',
+      kuse: '合わせすぎて、自分の意見が見えにくくなる',
+      use:  '提携・紹介・チームづくり。大事な決断だけは「自分で決める」と先に決めておく' },
+    { k: '丙', yomi: 'ひのえ',   gyo: '火', inyo: '陽', tatoe: '太陽',
+      good: '明るく、おおらか。表に立つだけで場が明るくなる',
+      kuse: '細かいことに目が行きにくい。思ったことがすぐ顔に出る',
+      use:  '会社の顔、広告塔。数字と段取りは、こまやかな人と組む' },
+    { k: '丁', yomi: 'ひのと',   gyo: '火', inyo: '陰', tatoe: '灯火',
+      good: 'こまやかな気配り。目の前のひとりを大切にする集中力と情熱',
+      kuse: 'がんばりすぎて燃えつきやすい。気持ちの火がゆらぎやすい',
+      use:  'お客さま一人ひとりに深く届く仕事。休む日を予定に入れておく' },
+    { k: '戊', yomi: 'つちのえ', gyo: '土', inyo: '陽', tatoe: '大山',
+      good: 'どっしりして、ゆるがない。まわりから頼られる安心感',
+      kuse: '腰が重く、変化が苦手',
+      use:  '組織の土台、最後のとりで。新しいことは、動きの速い人に先に走ってもらう' },
+    { k: '己', yomi: 'つちのと', gyo: '土', inyo: '陰', tatoe: '田畑',
+      good: '人や物ごとを、ていねいに育てる。受け入れて、実りに変える力',
+      kuse: '何でも引き受けて、かかえこみやすい',
+      use:  '人材育成、長く続く仕組みづくり。「やらないこと」を決めて手放す' },
+    { k: '庚', yomi: 'かのえ',   gyo: '金', inyo: '陽', tatoe: '刀剣',
+      good: '決断が早く、行動力がある。けじめをつけて、物ごとを切りひらく',
+      kuse: '言葉や態度がするどくなりやすい。強引に見えることも',
+      use:  '立て直し、新規参入、むずかしい交渉。伝え方だけは、ひと呼吸おく' },
+    { k: '辛', yomi: 'かのと',   gyo: '金', inyo: '陰', tatoe: '宝石',
+      good: '美しいものへの感性。磨かれるほど光る、自分らしさへのほこり',
+      kuse: '傷つきやすく、人の目が気になる。こだわりが強くなりすぎる',
+      use:  '品質・ブランド・デザイン。きびしい意見をくれる人を、そばに置く' },
+    { k: '壬', yomi: 'みずのえ', gyo: '水', inyo: '陽', tatoe: '大海',
+      good: 'スケールが大きく、自由。いろいろなものを受け入れて流れていく行動力',
+      kuse: 'ひとつの場所にとどまりにくい。つかみどころがないと思われやすい',
+      use:  '事業の拡大、新しい市場。足元を固める右腕と組む' },
+    { k: '癸', yomi: 'みずのと', gyo: '水', inyo: '陰', tatoe: '雨露',
+      good: '人の気持ちをくみとる力と、物ごとを深く考える知恵',
+      kuse: '考えすぎて、動き出すまでに時間がかかる',
+      use:  '企画・戦略・相談役。「いつまでに決めるか」を先に決めておく' },
+  ];
+  // 番外編で取り上げた4人（日干は教材の計算エンジンで算出）
+  const FAMOUS = {
+    1: ['本田宗一郎さん（ホンダ創業者・技術の天才）'],
+    2: ['井深大さん（ソニー創業者・技術の天才）'],
+    5: ['藤澤武夫さん（ホンダ・経営の右腕）', '盛田昭夫さん（ソニー・経営の右腕）'],
+  };
+
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const opt = (sel, from, to, val, suffix) => {
+    sel.innerHTML = '';
+    for (let i = from; i <= to; i++) sel.add(new Option(i + suffix, i, false, i === val));
+  };
+  const daysIn = (y, m) => new Date(Date.UTC(y, m, 0)).getUTCDate();
+
+  opt($('y'), 1900, 2050, 1980, '年');
+  opt($('m'), 1, 12, 1, '月');
+  const fillDays = () => {
+    const keep = Number($('d').value) || 1;
+    opt($('d'), 1, daysIn(Number($('y').value), Number($('m').value)), Math.min(keep, daysIn(Number($('y').value), Number($('m').value))), '日');
+  };
+  fillDays();
+  $('y').addEventListener('change', fillDays);
+  $('m').addEventListener('change', fillDays);
+
+  const namesOf = gyo => KAN.filter(x => x.gyo === gyo).map(x => `${x.k}（${x.yomi}）${x.tatoe}`).join('・');
+
+  function show(i) {
+    const t = KAN[i], g = GYO[t.gyo];
+    const gi = ORDER.indexOf(t.gyo);
+    const out = ORDER[(gi + 1) % 5];       // あなたが生む五行
+    const inn = ORDER[(gi + 4) % 5];       // あなたを生む五行
+    $('result').style.setProperty('--c', g.color);
+
+    $('hero').innerHTML = `
+      <p class="label">あなたの日干は</p>
+      <div class="kan" aria-hidden="true">${t.k}</div>
+      <p class="yomi">${t.k}（${t.yomi}）</p>
+      <p class="tatoe">${t.tatoe}</p>
+      <p class="gyo">${t.inyo}の${t.gyo} ／ 会社でいうと「${g.role}」</p>`;
+
+    $('detail').innerHTML = `
+      <h2>${t.tatoe}の経営者の持ち味</h2>
+      <dl>
+        <div><dt>持ち味</dt><dd>${t.good}</dd></div>
+        <div><dt>くせ（出すぎたとき）</dt><dd>${t.kuse}</dd></div>
+        <div><dt>活かし方</dt><dd>${t.use}</dd></div>
+      </dl>`;
+
+    $('partners').innerHTML = `
+      <h2>あなたと組むと力が出る相手</h2>
+      <p style="margin:0 0 14px">五行には「助け合う関係（相生：そうしょう）」があります。木→火→土→金→水→木の順に、前の五行が次の五行を生み出します。</p>
+      <div class="pair">
+        <div><b>あなたの力を実らせてくれる人</b>
+          <span class="el" style="background:${GYO[out].color}">${out}</span><span class="names">${out}の人</span>
+          <p>${namesOf(out)}。あなたが生み出したものを、形にしてくれる相手です。</p></div>
+        <div><b>あなたを育ててくれる人</b>
+          <span class="el" style="background:${GYO[inn].color}">${inn}</span><span class="names">${inn}の人</span>
+          <p>${namesOf(inn)}。あなたに力を注いでくれる相手です。</p></div>
+      </div>`;
+
+    const f = FAMOUS[i];
+    $('famous').innerHTML = f
+      ? `<h2>名経営者と同じ日干です</h2><p style="margin:0">あなたの日干「${t.k}（${t.tatoe}）」は、<b>${f.map(esc).join('、')}</b>と同じです。</p>
+         <p class="note-s" style="margin:10px 0 0">ホンダとソニーの名コンビを陰陽五行で見た記事は、noteの連載「経営と陰陽五行」の番外編にあります。</p>`
+      : `<h2>ホンダ・ソニーの名コンビでいうと</h2><p style="margin:0">本田宗一郎さんは「乙（草花）」、井深大さんは「丙（太陽）」。そして経営の右腕の藤澤武夫さんと盛田昭夫さんは、ふたりとも「己（田畑）」でした。<br>あなたの会社の「天才」と「実らせる人」は、だれでしょう？</p>`;
+
+    const url = location.origin + location.pathname;
+    const text = `わたしの日干は「${t.k}（${t.yomi}）＝${t.tatoe}」でした。あなたは10人のうちだれ？ #経営と陰陽五行`;
+    $('shareX').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url);
+    $('shareLine').href = 'https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text);
+    $('copy').onclick = () => {
+      (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject())
+        .then(() => { $('copy').textContent = 'コピーしました'; })
+        .catch(() => { prompt('このリンクをコピーしてください', url); });
+    };
+
+    $('result').hidden = false;
+    $('hero').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  $('f').addEventListener('submit', e => {
+    e.preventDefault();
+    show(dayKan(Number($('y').value), Number($('m').value), Number($('d').value)));
+  });
+  $('again').addEventListener('click', () => {
+    $('result').hidden = true;
+    $('copy').textContent = 'リンクをコピー';
+    $('f').scrollIntoView({ behavior: 'smooth' });
+  });
+})();
+</script>
+</body>
+</html>
