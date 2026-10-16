@@ -4,7 +4,7 @@
  */
 (() => {
   'use strict';
-  const GA_ID = '';   // ← ここに測定IDを入れる（例：'G-ABC123XYZ9'）
+  const GA_ID = 'G-TLPRG6DJWE';   // GA4 プロパティ「日干チェック」の測定ID
   window.qmTrack = () => {};
   if (!/^G-[A-Z0-9]+$/.test(GA_ID)) return;
   const s = document.createElement('script');
