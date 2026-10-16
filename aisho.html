@@ -14,6 +14,7 @@
 <meta property="og:site_name" content="営業革命！売上倍増コンテンツ集">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
+<script src="analytics.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@600;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
@@ -241,11 +242,15 @@ footer { text-align: center; font-size: .8rem; color: var(--ink-soft); padding: 
     const text = `わたしと右腕は「${t.name}${t.alias ? '（' + t.alias + '）' : ''}」でした。あなたの会社は？ #経営と陰陽五行`;
     $('shareX').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url);
     $('shareLine').href = 'https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text);
+    $('shareX').onclick = () => qmTrack('share', { tool: 'aisho', method: 'x' });
+    $('shareLine').onclick = () => qmTrack('share', { tool: 'aisho', method: 'line' });
     $('copy').onclick = () => {
+      qmTrack('share', { tool: 'aisho', method: 'copy' });
       (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject())
         .then(() => { $('copy').textContent = 'コピーしました'; })
         .catch(() => { prompt('このリンクをコピーしてください', url); });
     };
+    qmTrack('check_done', { tool: 'aisho', result: t.name });
     $('result').hidden = false;
     $('main').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
