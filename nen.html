@@ -147,8 +147,8 @@ footer { text-align: center; font-size: .8rem; color: var(--ink-soft); padding: 
 <script>
 (() => {
   'use strict';
-  // ★ セミナーLPを公開したら、ここをそのURLに変える（今は連載マガジンへ）
-  const SEMINAR_URL = 'https://note.com/lucky_panda5334/m/md9f7d3ee7413';
+  // セミナーLP（先行案内）。utm で「年の巡りチェックから来た」とわかるようにする
+  const SEMINAR_URL = 'https://yabemasaru23-source.github.io/keiei-onmyo/?utm_source=nikkan-check&utm_medium=tool&utm_campaign=nen';
   const track = (...args) => { if (typeof window.qmTrack === 'function') window.qmTrack(...args); };
 
   // 日干 = (1970-01-01 からの日数 + 7) mod 10 ／ 年の干 = (西暦 - 4) mod 10（立春で切りかえ）
