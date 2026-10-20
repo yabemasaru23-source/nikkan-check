@@ -106,13 +106,13 @@ footer { text-align: center; font-size: .8rem; color: var(--ink-soft); padding: 
     <div id="years"></div>
     <div class="card more">
       <h2>3年先より、もっと先まで見たい方へ</h2>
-      <p style="margin:0">このチェックで見られるのは、3年分の「年のテーマ」までです。<br>「経営と陰陽五行セミナー」の分析アプリなら、さらにこんなことがわかります。</p>
+      <p style="margin:0">このチェックで見られるのは、3年分の「年のテーマ」までです。<br>いま、さらにこんなことがわかるセミナーを準備しています。</p>
       <ul>
         <li><b>10年ごとの大きな流れ</b>（大運：たいうん）</li>
         <li><b>社員・幹部全員分</b>の持ち味と、年のテーマ</li>
         <li>分析結果を<b>PDFにして</b>、面談や計画会議の資料に</li>
       </ul>
-      <a class="btn" id="seminar" href="#">セミナーのくわしい内容を見る ▶</a>
+      <a class="btn" id="seminar" href="#">連載マガジンで最新情報を受け取る ▶</a>
     </div>
     <div class="card">
       <h2>結果をシェアする</h2>
@@ -147,8 +147,8 @@ footer { text-align: center; font-size: .8rem; color: var(--ink-soft); padding: 
 <script>
 (() => {
   'use strict';
-  // セミナーLP（先行案内）。utm で「年の巡りチェックから来た」とわかるようにする
-  const SEMINAR_URL = 'https://yabemasaru23-source.github.io/keiei-onmyo/?utm_source=nikkan-check&utm_medium=tool&utm_campaign=nen';
+  // セミナーLPの準備ができたら、ここをLPのURL（https://yabemasaru23-source.github.io/keiei-onmyo/?utm_source=nikkan-check&utm_medium=tool&utm_campaign=nen）に戻す。今は連載マガジンへ
+  const SEMINAR_URL = 'https://note.com/lucky_panda5334/m/md9f7d3ee7413';
   const track = (...args) => { if (typeof window.qmTrack === 'function') window.qmTrack(...args); };
 
   // 日干 = (1970-01-01 からの日数 + 7) mod 10 ／ 年の干 = (西暦 - 4) mod 10（立春で切りかえ）
