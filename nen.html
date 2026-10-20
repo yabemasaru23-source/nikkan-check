@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>今年は攻める年？整える年？ ― 年の巡りチェック｜経営と陰陽五行</title>
+<meta name="description" content="生年月日を選ぶだけで、今年・来年・再来年が「攻める年」か「整える年」かがわかる無料チェック。陰陽五行の5つの年のテーマと、経営でやること・気をつけることがわかります。">
+<link rel="canonical" href="https://yabemasaru23-source.github.io/nikkan-check/nen.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="今年は攻める年？整える年？ ― 年の巡りチェック">
+<meta property="og:description" content="生年月日を選ぶだけで、3年分の「年のテーマ」がわかる無料チェック。">
+<meta property="og:url" content="https://yabemasaru23-source.github.io/nikkan-check/nen.html">
+<meta property="og:image" content="https://yabemasaru23-source.github.io/nikkan-check/ogp-nen.png">
+<meta property="og:site_name" content="営業革命！売上倍増コンテンツ集">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<script src="analytics.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@600;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5efe3; --paper: #fffdf8; --ink: #26221d; --ink-soft: #5e564c; --line: #d8cdb9;
+  --shu: #c03430; --shu-soft: #f6e0dc; --semi: #e8322b;
+  --moku: #2d7a4a; --ka: #c03430; --do: #a87018; --kin: #5d6a7c; --sui: #2854a0;
+  --seme: #e8322b; --totonoe: #2854a0; --kumu: #a87018;
+  --mincho: "Zen Old Mincho", "Yu Mincho", serif;
+  --gothic: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--gothic); font-size: 17px; line-height: 1.85; }
+.wrap { max-width: 680px; margin: 0 auto; padding: 0 16px 64px; }
+header { text-align: center; padding: 36px 0 8px; }
+.kicker { display: inline-block; padding: 4px 16px; border: 1.5px solid var(--shu); border-radius: 999px; color: var(--shu); font-weight: 900; font-size: .85rem; letter-spacing: .12em; }
+h1 { font-family: var(--mincho); font-weight: 900; font-size: clamp(1.7rem, 6.5vw, 2.5rem); line-height: 1.4; margin: 14px 0 8px; }
+h1 em { font-style: normal; }
+h1 .s { color: var(--seme); } h1 .t { color: var(--totonoe); }
+.lead { color: var(--ink-soft); margin: 0 0 24px; }
+.form { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 22px 18px; }
+.form p { margin: 0 0 10px; font-weight: 700; }
+.selects { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 10px; }
+.selects label { display: grid; gap: 4px; font-size: .85rem; color: var(--ink-soft); }
+select { font: inherit; font-size: 1.1rem; padding: 10px 8px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); width: 100%; }
+select:focus, button:focus-visible, a:focus-visible { outline: 3px solid #2e5aa8; outline-offset: 2px; }
+.go { margin-top: 16px; width: 100%; border: 0; cursor: pointer; font: inherit; font-weight: 900; font-size: 1.15rem; padding: 15px; border-radius: 999px; background: var(--shu); color: #fff; box-shadow: 0 5px 0 #8f231f; }
+.go:active { transform: translateY(2px); box-shadow: 0 3px 0 #8f231f; }
+.privacy { font-size: .78rem; color: var(--ink-soft); margin: 12px 0 0; text-align: center; }
+.result { margin-top: 28px; }
+.result[hidden] { display: none; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 24px 20px; margin-bottom: 16px; }
+h2 { font-family: var(--mincho); font-weight: 900; font-size: 1.3rem; margin: 0 0 12px; }
+.me { display: flex; align-items: center; gap: 14px; }
+.me .k { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 14px; color: #fff; font-family: var(--mincho); font-weight: 900; font-size: 44px; flex: none; }
+.me p { margin: 0; }
+.flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 16px; }
+.flow div { text-align: center; border-radius: 14px; padding: 10px 4px; color: #fff; font-weight: 900; line-height: 1.35; }
+.flow small { display: block; font-weight: 700; font-size: .78rem; opacity: .9; }
+.flow span { display: block; font-size: 1.15rem; }
+.year { border-top: 8px solid var(--c); }
+.year .head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.year .y { font-weight: 900; font-size: 1.1rem; }
+.year .y small { color: var(--ink-soft); font-weight: 700; margin-left: 6px; }
+.year .tag { display: inline-block; color: #fff; background: var(--c); font-weight: 900; border-radius: 999px; padding: 2px 14px; font-size: .9rem; }
+.year h3 { font-family: var(--mincho); font-weight: 900; font-size: 1.8rem; margin: 6px 0 2px; color: var(--c); }
+.year .kan { color: var(--ink-soft); font-size: .9rem; margin: 0 0 12px; }
+dl { margin: 0; display: grid; gap: 10px; }
+dt { font-weight: 900; }
+dd { margin: 0; }
+.more { background: #fff7e0; border: 2px solid #f0c64a; }
+.more ul { margin: 8px 0 12px; padding-left: 1.2em; }
+.more a.btn { display: block; text-align: center; text-decoration: none; background: var(--ink); color: #ffe27a; font-weight: 900; padding: 14px; border-radius: 999px; }
+.share { display: flex; gap: 10px; flex-wrap: wrap; }
+.share a, .share button { flex: 1; min-width: 140px; text-align: center; text-decoration: none; font: inherit; font-weight: 900; padding: 12px; border-radius: 999px; border: 0; cursor: pointer; color: #fff; }
+.share .x { background: #111; } .share .line { background: #06C755; } .share .copy { background: var(--ink-soft); }
+.links { text-align: center; }
+.links a { display: inline-block; margin: 4px 8px; color: var(--shu); font-weight: 900; }
+.again { display: block; margin: 0 auto; background: none; border: 0; color: var(--ink-soft); text-decoration: underline; font: inherit; cursor: pointer; }
+.themes { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: .92rem; }
+.themes li { background: var(--bg); border-radius: 10px; padding: 8px 12px; }
+.themes b { margin-right: 6px; }
+.note-s { font-size: .78rem; color: var(--ink-soft); line-height: 1.7; }
+footer { text-align: center; font-size: .8rem; color: var(--ink-soft); padding: 20px 16px 40px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="kicker">経営と陰陽五行 ｜ 無料チェック 第3弾</span>
+    <h1>今年は<em class="s">攻める年</em>？<br><em class="t">整える年</em>？</h1>
+    <p class="lead">生年月日を選ぶだけ。今年・来年・再来年の<br>「年のテーマ」と、経営でやることがわかります。</p>
+  </header>
+
+  <form class="form" id="f">
+    <p>あなたの生年月日を選んでください</p>
+    <div class="selects">
+      <label>年<select id="y"></select></label>
+      <label>月<select id="m"></select></label>
+      <label>日<select id="d"></select></label>
+    </div>
+    <button class="go" type="submit">3年分の流れを見る</button>
+    <p class="privacy">入力した生年月日は、このページの中だけで計算します。どこにも送られません。</p>
+  </form>
+
+  <div class="result" id="result" hidden aria-live="polite">
+    <div class="card" id="summary"></div>
+    <div id="years"></div>
+    <div class="card more">
+      <h2>3年先より、もっと先まで見たい方へ</h2>
+      <p style="margin:0">このチェックで見られるのは、3年分の「年のテーマ」までです。<br>「経営と陰陽五行セミナー」の分析アプリなら、さらにこんなことがわかります。</p>
+      <ul>
+        <li><b>10年ごとの大きな流れ</b>（大運：たいうん）</li>
+        <li><b>社員・幹部全員分</b>の持ち味と、年のテーマ</li>
+        <li>分析結果を<b>PDFにして</b>、面談や計画会議の資料に</li>
+      </ul>
+      <a class="btn" id="seminar" href="#">セミナーのくわしい内容を見る ▶</a>
+    </div>
+    <div class="card">
+      <h2>結果をシェアする</h2>
+      <div class="share">
+        <a class="x" id="shareX" target="_blank" rel="noopener">Xでシェア</a>
+        <a class="line" id="shareLine" target="_blank" rel="noopener">LINEで送る</a>
+        <button class="copy" type="button" id="copy">リンクをコピー</button>
+      </div>
+      <p class="note-s" style="margin-top:12px">シェアされるのは「年のテーマ」の名前だけです。生年月日は送られません。</p>
+    </div>
+    <div class="card links">
+      <a href="./">日干チェック</a><a href="aisho.html">右腕との相性チェック</a><br>
+      <a href="https://note.com/lucky_panda5334/m/md9f7d3ee7413">連載「経営と陰陽五行」を読む →</a>
+    </div>
+    <button class="again" type="button" id="again">別の生年月日で調べる</button>
+  </div>
+
+  <div class="card" style="margin-top:28px">
+    <h2>5つの年のテーマ</h2>
+    <ul class="themes">
+      <li><b style="color:var(--seme)">発信の年</b>攻める：アイデアや商品を、世に出す</li>
+      <li><b style="color:var(--seme)">成果の年</b>攻める：売上・結果を取りにいく</li>
+      <li><b style="color:var(--kumu)">仲間の年</b>組む：仲間と組み、チームを固める</li>
+      <li><b style="color:var(--totonoe)">責任の年</b>整える：組織・ルール・役割を整える</li>
+      <li><b style="color:var(--totonoe)">学びの年</b>整える：学び、たくわえ、次に備える</li>
+    </ul>
+    <p class="note-s" style="margin:12px 0 0">※ 陰陽五行の1年は、立春（2月4日ごろ）に切りかわります。<br>※ どのテーマにも良い・悪いはありません。「当たる・外れる」ではなく、計画を立てるときの「ものさし」として使ってください。</p>
+  </div>
+</div>
+<footer>営業革命！売上倍増コンテンツ集 ｜ 経営と陰陽五行</footer>
+
+<script>
+(() => {
+  'use strict';
+  // ★ セミナーLPを公開したら、ここをそのURLに変える（今は連載マガジンへ）
+  const SEMINAR_URL = 'https://note.com/lucky_panda5334/m/md9f7d3ee7413';
+  const track = (...args) => { if (typeof window.qmTrack === 'function') window.qmTrack(...args); };
+
+  // 日干 = (1970-01-01 からの日数 + 7) mod 10 ／ 年の干 = (西暦 - 4) mod 10（立春で切りかえ）
+  // どちらも教材の検証用エンジンと 1900〜2050 年の全データで一致を確認ずみ
+  const dayKan = (y, m, d) => (((Math.floor(Date.UTC(y, m - 1, d) / 864e5) + 7) % 10) + 10) % 10;
+  const yearKan = Y => (((Y - 4) % 10) + 10) % 10;
+  const KAN = [
+    ['甲', 'きのえ', '大樹'], ['乙', 'きのと', '草花'], ['丙', 'ひのえ', '太陽'], ['丁', 'ひのと', '灯火'], ['戊', 'つちのえ', '大山'],
+    ['己', 'つちのと', '田畑'], ['庚', 'かのえ', '刀剣'], ['辛', 'かのと', '宝石'], ['壬', 'みずのえ', '大海'], ['癸', 'みずのと', '雨露'],
+  ];
+  const ORDER = ['木', '火', '土', '金', '水'];
+  const COLOR = { 木: 'var(--moku)', 火: 'var(--ka)', 土: 'var(--do)', 金: 'var(--kin)', 水: 'var(--sui)' };
+  const gyoOf = i => ORDER[Math.floor(i / 2)];
+
+  const THEMES = {
+    nakama:  { name: '仲間の年', tag: '組む',   color: 'var(--kumu)',
+      line: '同じ五行の年。仲間や同業と力を合わせると、勢いが出る年です。',
+      todo: '右腕・幹部と方針をそろえる。同業との提携や共同企画を考える。チームの結束を固める。',
+      care: '張り合いや、ひとりで決めてしまう独断に注意。「自分がやったほうが早い」は封印を。' },
+    hasshin: { name: '発信の年', tag: '攻める', color: 'var(--seme)',
+      line: 'あなたの五行が、年の五行を生み出す年。あなたの中のものが、外に出ていく年です。',
+      todo: '新商品・新サービスを出す。SNSやセミナーで発信する。アイデアを形にして世に出す。',
+      care: '言いすぎ・やりすぎに注意。出すことに夢中になって、足元の数字を見落とさないように。' },
+    seika:   { name: '成果の年', tag: '攻める', color: 'var(--seme)',
+      line: 'あなたの五行が、年の五行を押さえる年。動いたぶんが、結果やお金になりやすい年です。',
+      todo: '営業を強める。売上・利益の目標を高めに置く。これまでの取り組みを、成果として取りにいく。',
+      care: '欲張りすぎと、体力の使いすぎに注意。取りにいくほど、守りの仕組みも一緒に。' },
+    sekinin: { name: '責任の年', tag: '整える', color: 'var(--totonoe)',
+      line: '年の五行が、あなたの五行を押さえる年。立場や役割の重さが増す年です。',
+      todo: '組織図・ルール・役割分担を整える。任せる人を決める。会社の土台を固める。',
+      care: 'プレッシャーと、かかえこみに注意。ひとりで背負わず、引きしめ役の右腕に頼る。' },
+    manabi:  { name: '学びの年', tag: '整える', color: 'var(--totonoe)',
+      line: '年の五行が、あなたの五行を生み出す年。外から力や知恵をもらえる年です。',
+      todo: '学ぶ・研修を受ける・仕組みを見直す。人の話を聞き、次の攻めに向けてたくわえる。',
+      care: '動かなすぎに注意。考えるだけで終わらせず、小さく試すことは続ける。' },
+  };
+  function theme(me, yk) {
+    const x = ORDER.indexOf(gyoOf(me)), y = ORDER.indexOf(gyoOf(yk));
+    if (x === y) return 'nakama';
+    if ((x + 1) % 5 === y) return 'hasshin';
+    if ((x + 2) % 5 === y) return 'seika';
+    if ((y + 2) % 5 === x) return 'sekinin';
+    return 'manabi';
+  }
+
+  const $ = id => document.getElementById(id);
+  const opt = (sel, from, to, val, suffix) => { sel.innerHTML = ''; for (let i = from; i <= to; i++) sel.add(new Option(i + suffix, i, false, i === val)); };
+  const daysIn = (y, m) => new Date(Date.UTC(y, m, 0)).getUTCDate();
+  opt($('y'), 1900, 2050, 1975, '年'); opt($('m'), 1, 12, 1, '月');
+  const fill = () => { const n = daysIn(+$('y').value, +$('m').value); opt($('d'), 1, n, Math.min(+$('d').value || 1, n), '日'); };
+  fill(); $('y').addEventListener('change', fill); $('m').addEventListener('change', fill);
+  $('seminar').href = SEMINAR_URL;
+  $('seminar').addEventListener('click', () => track('seminar_click', { tool: 'nen' }));
+
+  // 今が陰陽五行の何年か（立春 2/4 ごろで切りかえ）
+  function solarYearNow() {
+    const now = new Date(Date.now() + 9 * 3600e3);   // 日本時間
+    const y = now.getUTCFullYear(), md = (now.getUTCMonth() + 1) * 100 + now.getUTCDate();
+    return md < 204 ? y - 1 : y;
+  }
+
+  function show(me) {
+    const [k, yomi, tatoe] = KAN[me];
+    const Y0 = solarYearNow();
+    const list = [0, 1, 2].map(n => { const Y = Y0 + n, yk = yearKan(Y); return { Y, yk, t: THEMES[theme(me, yk)], key: theme(me, yk), n }; });
+    const label = ['今年', '来年', '再来年'];
+
+    $('summary').innerHTML = `
+      <div class="me"><span class="k" style="background:${COLOR[gyoOf(me)]}">${k}</span>
+        <p>あなたの日干は <b>${k}（${yomi}）＝${tatoe}</b>（${gyoOf(me)}）。<br>これからの3年は、こんな流れです。</p></div>
+      <div class="flow">${list.map(x => `<div style="background:${x.t.color}"><small>${label[x.n]}（${x.Y}）</small><span>${x.t.tag}</span><small>${x.t.name}</small></div>`).join('')}</div>`;
+
+    $('years').innerHTML = list.map(x => {
+      const [yk, yy, yt] = KAN[x.yk];
+      return `<div class="card year" style="--c:${x.t.color}">
+        <div class="head"><span class="y">${label[x.n]}<small>${x.Y}年（立春〜）</small></span><span class="tag">${x.t.tag}</span></div>
+        <h3>${x.t.name}</h3>
+        <p class="kan">その年の干：${yk}（${yy}）＝${yt}（${gyoOf(x.yk)}）</p>
+        <dl>
+          <div><dt>どんな年？</dt><dd>${x.t.line}</dd></div>
+          <div><dt>経営でやること</dt><dd>${x.t.todo}</dd></div>
+          <div><dt>気をつけること</dt><dd>${x.t.care}</dd></div>
+        </dl></div>`;
+    }).join('');
+
+    track('check_done', { tool: 'nen', result: list.map(x => x.t.name).join('→') });
+    const url = location.origin + location.pathname;
+    const text = `わたしの今年は「${list[0].t.name}（${list[0].t.tag}）」、来年は「${list[1].t.name}」でした。あなたは？ #経営と陰陽五行`;
+    $('shareX').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url);
+    $('shareLine').href = 'https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text);
+    $('shareX').onclick = () => track('share', { tool: 'nen', method: 'x' });
+    $('shareLine').onclick = () => track('share', { tool: 'nen', method: 'line' });
+    $('copy').onclick = () => {
+      track('share', { tool: 'nen', method: 'copy' });
+      (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject())
+        .then(() => { $('copy').textContent = 'コピーしました'; })
+        .catch(() => { prompt('このリンクをコピーしてください', url); });
+    };
+    $('result').hidden = false;
+    $('summary').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  $('f').addEventListener('submit', e => { e.preventDefault(); show(dayKan(+$('y').value, +$('m').value, +$('d').value)); });
+  $('again').addEventListener('click', () => { $('result').hidden = true; $('copy').textContent = 'リンクをコピー'; $('f').scrollIntoView({ behavior: 'smooth' }); });
+  window.__nen = { dayKan, yearKan, theme };
+})();
+</script>
+</body>
+</html>
