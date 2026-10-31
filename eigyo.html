@@ -7,7 +7,7 @@
 <meta name="description" content="お客さまの生年月日を選ぶだけで、響く言葉・地雷ワード・締め方・買う気になったサインがわかる無料チェック。陰陽五行の10タイプ別に、営業のクロージングを変えましょう。">
 <link rel="canonical" href="https://yabemasaru23-source.github.io/nikkan-check/eigyo.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="お客さまに刺さる「決めゼリフ」チェック ― 誕生日でわかる10タイプ別クロージング">
+<meta property="og:title" content="クロージングの神は、お客さまの誕生日を見ていた ― 神の一言チェック">
 <meta property="og:description" content="生年月日を選ぶだけで、響く言葉・地雷ワード・締め方がわかる無料チェック。">
 <meta property="og:url" content="https://yabemasaru23-source.github.io/nikkan-check/eigyo.html">
 <meta property="og:image" content="https://yabemasaru23-source.github.io/nikkan-check/ogp-eigyo.png">
@@ -77,9 +77,9 @@ footer { text-align: center; font-size: .8rem; color: var(--ink-soft); padding: 
 <body>
 <div class="wrap">
   <header>
-    <span class="kicker">経営と陰陽五行 ｜ 無料チェック 営業編</span>
-    <h1>お客さまに刺さる<br><em>"決めゼリフ"</em>はどれ？</h1>
-    <p class="lead">お客さまの生年月日を選ぶだけ。<br>響く言葉・地雷ワード・締め方がわかります。</p>
+    <span class="kicker">営業が化ける ｜ クロージングの神ワザ（無料）</span>
+    <h1>お客さまの誕生日で<br><em>神の一言</em>がわかる</h1>
+    <p class="lead">え、こんなことまでわかるの？<br>お客さまの生年月日を選ぶだけで、神の一言・地雷ワード・締め方が出ます。</p>
   </header>
 
   <form class="form" id="f">
@@ -89,7 +89,7 @@ footer { text-align: center; font-size: .8rem; color: var(--ink-soft); padding: 
       <label>月<select id="m"></select></label>
       <label>日<select id="d"></select></label>
     </div>
-    <button class="go" type="submit">響く言葉を見る</button>
+    <button class="go" type="submit">神の一言を見る</button>
     <p class="privacy">入力した生年月日は、このページの中だけで計算します。どこにも送られません。<br>相手の生年月日は、ご本人の了解のうえでお使いください。</p>
   </form>
 
@@ -156,7 +156,7 @@ footer { text-align: center; font-size: .8rem; color: var(--ink-soft); padding: 
     $('hero').innerHTML = `<p class="label">このお客さまの日干は</p><div class="kan">${k}</div>
       <h2>${k}（${yomi}）＝${tatoe}</h2><span class="type">${esc(p.brain)}</span>
       <p class="ess">${esc(p.ess)}</p>`;
-    $('words').innerHTML = `<h3>響く言葉（背中を押す）</h3>
+    $('words').innerHTML = `<h3>神の一言（背中を押す）</h3>
       ${p.killer.map(t => `<div class="say ok">「${esc(t)}」</div>`).join('')}
       <h3 style="margin-top:20px">地雷ワード（一瞬で信頼を失う）</h3>
       ${p.taboo.map(t => { const m = t.match(/^(.*?)（(.*)）$/); return `<div class="say ng">「${esc(m ? m[1] : t)}」${m ? `<small>${esc(m[2])}</small>` : ''}</div>`; }).join('')}`;
