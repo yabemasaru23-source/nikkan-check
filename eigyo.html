@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お客さまに刺さる「決めゼリフ」チェック ― 誕生日でわかる10タイプ別クロージング｜経営と陰陽五行</title>
+<meta name="description" content="お客さまの生年月日を選ぶだけで、響く言葉・地雷ワード・締め方・買う気になったサインがわかる無料チェック。陰陽五行の10タイプ別に、営業のクロージングを変えましょう。">
+<link rel="canonical" href="https://yabemasaru23-source.github.io/nikkan-check/eigyo.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="お客さまに刺さる「決めゼリフ」チェック ― 誕生日でわかる10タイプ別クロージング">
+<meta property="og:description" content="生年月日を選ぶだけで、響く言葉・地雷ワード・締め方がわかる無料チェック。">
+<meta property="og:url" content="https://yabemasaru23-source.github.io/nikkan-check/eigyo.html">
+<meta property="og:image" content="https://yabemasaru23-source.github.io/nikkan-check/ogp-eigyo.png">
+<meta property="og:site_name" content="営業革命！売上倍増コンテンツ集">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<script src="analytics.js"></script>
+<script src="eigyo-data.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@600;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5efe3; --paper: #fffdf8; --ink: #26221d; --ink-soft: #5e564c; --line: #d8cdb9;
+  --shu: #c03430; --shu-soft: #f6e0dc; --ok: #2d7a4a; --ok-soft: #dcefe2; --ng: #c03430; --ng-soft: #f8e1dc;
+  --moku: #2d7a4a; --ka: #c03430; --do: #a87018; --kin: #5d6a7c; --sui: #2854a0;
+  --mincho: "Zen Old Mincho", "Yu Mincho", serif;
+  --gothic: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--gothic); font-size: 17px; line-height: 1.85; }
+.wrap { max-width: 680px; margin: 0 auto; padding: 0 16px 64px; }
+header { text-align: center; padding: 36px 0 8px; }
+.kicker { display: inline-block; padding: 4px 16px; border: 1.5px solid var(--shu); border-radius: 999px; color: var(--shu); font-weight: 900; font-size: .85rem; letter-spacing: .12em; }
+h1 { font-family: var(--mincho); font-weight: 900; font-size: clamp(1.6rem, 6.2vw, 2.4rem); line-height: 1.4; margin: 14px 0 8px; }
+h1 em { font-style: normal; color: var(--shu); }
+.lead { color: var(--ink-soft); margin: 0 0 24px; }
+.form { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 22px 18px; }
+.form p { margin: 0 0 10px; font-weight: 700; }
+.selects { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 10px; }
+.selects label { display: grid; gap: 4px; font-size: .85rem; color: var(--ink-soft); }
+select { font: inherit; font-size: 1.1rem; padding: 10px 8px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); width: 100%; }
+select:focus, button:focus-visible, a:focus-visible { outline: 3px solid #2e5aa8; outline-offset: 2px; }
+.go { margin-top: 16px; width: 100%; border: 0; cursor: pointer; font: inherit; font-weight: 900; font-size: 1.15rem; padding: 15px; border-radius: 999px; background: var(--shu); color: #fff; box-shadow: 0 5px 0 #8f231f; }
+.go:active { transform: translateY(2px); box-shadow: 0 3px 0 #8f231f; }
+.privacy { font-size: .78rem; color: var(--ink-soft); margin: 12px 0 0; text-align: center; }
+.result { margin-top: 28px; }
+.result[hidden] { display: none; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 24px 20px; margin-bottom: 16px; }
+.hero { text-align: center; border-top: 8px solid var(--c); }
+.hero .label { margin: 0; font-weight: 700; color: var(--ink-soft); }
+.kan { display: grid; place-items: center; width: 110px; height: 110px; margin: 10px auto; border-radius: 18px; background: var(--c); color: #fff; font-family: var(--mincho); font-weight: 900; font-size: 76px; line-height: 1; }
+.hero h2 { font-family: var(--mincho); font-weight: 900; font-size: 1.7rem; margin: 0; color: var(--c); }
+.hero .type { display: inline-block; margin: 8px 0 10px; background: var(--ink); color: #fff; font-weight: 900; border-radius: 999px; padding: 2px 14px; font-size: .9rem; }
+.hero p.ess { margin: 0; color: var(--ink-soft); text-align: left; }
+h3 { font-family: var(--mincho); font-weight: 900; font-size: 1.25rem; margin: 0 0 12px; }
+.say { border-radius: 12px; padding: 10px 14px; margin-bottom: 8px; font-weight: 700; }
+.say.ok { background: var(--ok-soft); border-left: 6px solid var(--ok); }
+.say.ng { background: var(--ng-soft); border-left: 6px solid var(--ng); }
+.say small { display: block; font-weight: 400; color: var(--ink-soft); font-size: .85rem; }
+.sign { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 6px; }
+.sign li { background: var(--bg); border-radius: 10px; padding: 8px 12px; font-size: .95rem; }
+.sign li::before { content: "✔ "; color: var(--ok); font-weight: 900; }
+.locked { background: #fff7e0; border: 2px dashed #e0b23c; }
+.locked p { margin: 0; }
+.locked b.t { display: block; font-family: var(--mincho); font-size: 1.15rem; margin-bottom: 6px; }
+.share { display: flex; gap: 10px; flex-wrap: wrap; }
+.share a, .share button { flex: 1; min-width: 140px; text-align: center; text-decoration: none; font: inherit; font-weight: 900; padding: 12px; border-radius: 999px; border: 0; cursor: pointer; color: #fff; }
+.share .x { background: #111; } .share .line { background: #06C755; } .share .copy { background: var(--ink-soft); }
+.links { text-align: center; }
+.links a { display: inline-block; margin: 4px 8px; color: var(--shu); font-weight: 900; }
+.again { display: block; margin: 0 auto; background: none; border: 0; color: var(--ink-soft); text-decoration: underline; font: inherit; cursor: pointer; }
+.note-s { font-size: .78rem; color: var(--ink-soft); line-height: 1.7; }
+footer { text-align: center; font-size: .8rem; color: var(--ink-soft); padding: 20px 16px 40px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="kicker">経営と陰陽五行 ｜ 無料チェック 営業編</span>
+    <h1>お客さまに刺さる<br><em>"決めゼリフ"</em>はどれ？</h1>
+    <p class="lead">お客さまの生年月日を選ぶだけ。<br>響く言葉・地雷ワード・締め方がわかります。</p>
+  </header>
+
+  <form class="form" id="f">
+    <p>お客さま（相手）の生年月日を選んでください</p>
+    <div class="selects">
+      <label>年<select id="y"></select></label>
+      <label>月<select id="m"></select></label>
+      <label>日<select id="d"></select></label>
+    </div>
+    <button class="go" type="submit">響く言葉を見る</button>
+    <p class="privacy">入力した生年月日は、このページの中だけで計算します。どこにも送られません。<br>相手の生年月日は、ご本人の了解のうえでお使いください。</p>
+  </form>
+
+  <div class="result" id="result" hidden aria-live="polite">
+    <div class="card hero" id="hero"></div>
+    <div class="card" id="words"></div>
+    <div class="card" id="close"></div>
+    <div class="card locked">
+      <p><b class="t">🔒 この先は「総合版」で</b>命式アプリの営業編には、このほかに<br>
+      ・<b>あえて引く「逆転の一手」</b>（押すほど逃げる人への切り札）<br>
+      ・<b>断る気になったサイン</b>（ここでは押さずに引く）<br>
+      ・<b>商材別の実戦クロージング例</b><br>
+      ・<b>命式全体から見た「押し」と「引き」のさじ加減</b><br>
+      までが入っています。いま、全部をまとめて学べる仕組みを準備しています。</p>
+      <p style="margin-top:10px"><a id="more" href="#" style="color:var(--shu);font-weight:900">連載マガジンで最新情報を受け取る ▶</a></p>
+    </div>
+    <div class="card">
+      <h3>結果をシェアする</h3>
+      <div class="share">
+        <a class="x" id="shareX" target="_blank" rel="noopener">Xでシェア</a>
+        <a class="line" id="shareLine" target="_blank" rel="noopener">LINEで送る</a>
+        <button class="copy" type="button" id="copy">リンクをコピー</button>
+      </div>
+      <p class="note-s" style="margin-top:12px">シェアされるのはタイプ名だけです。生年月日は送られません。</p>
+    </div>
+    <div class="card links">
+      <a href="./">日干チェック</a><a href="aisho.html">右腕との相性チェック</a><a href="nen.html">年の巡りチェック</a><br>
+      <a href="https://note.com/lucky_panda5334/m/md9f7d3ee7413">連載「経営と陰陽五行」を読む →</a>
+    </div>
+    <button class="again" type="button" id="again">別のお客さまで調べる</button>
+  </div>
+
+  <p class="note-s" style="margin-top:28px">※ 日干は生まれた日の「日柱」のいちばん上の字です。夜11時以降に生まれた方は、考え方によって翌日の字で見ることもあります。<br>※ 言葉は「入り口」です。目の前のお客さまの反応をいちばん大切にしてください。</p>
+</div>
+<footer>営業革命！売上倍増コンテンツ集 ｜ 経営と陰陽五行</footer>
+
+<script>
+(() => {
+  'use strict';
+  const MORE_URL = 'https://note.com/lucky_panda5334/m/md9f7d3ee7413';   // 総合版のLPができたら差し替える
+  const track = (...a) => { if (typeof window.qmTrack === 'function') window.qmTrack(...a); };
+  // 日干 = (1970-01-01 からの日数 + 7) mod 10（教材の検証用エンジンと 1900〜2050 年の全日付で一致を確認ずみ）
+  const dayKan = (y, m, d) => (((Math.floor(Date.UTC(y, m - 1, d) / 864e5) + 7) % 10) + 10) % 10;
+  const KAN = [['甲','きのえ','大樹'],['乙','きのと','草花'],['丙','ひのえ','太陽'],['丁','ひのと','灯火'],['戊','つちのえ','大山'],
+               ['己','つちのと','田畑'],['庚','かのえ','刀剣'],['辛','かのと','宝石'],['壬','みずのえ','大海'],['癸','みずのと','雨露']];
+  const ORDER = ['木','火','土','金','水'];
+  const COLOR = { 木:'var(--moku)', 火:'var(--ka)', 土:'var(--do)', 金:'var(--kin)', 水:'var(--sui)' };
+  const D = window.EIGYO_DATA;
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
+  const opt = (sel, from, to, val, suf) => { sel.innerHTML = ''; for (let i = from; i <= to; i++) sel.add(new Option(i + suf, i, false, i === val)); };
+  const daysIn = (y, m) => new Date(Date.UTC(y, m, 0)).getUTCDate();
+  opt($('y'), 1900, 2050, 1970, '年'); opt($('m'), 1, 12, 1, '月');
+  const fill = () => { const n = daysIn(+$('y').value, +$('m').value); opt($('d'), 1, n, Math.min(+$('d').value || 1, n), '日'); };
+  fill(); $('y').addEventListener('change', fill); $('m').addEventListener('change', fill);
+  $('more').href = MORE_URL;
+  $('more').addEventListener('click', () => track('more_click', { tool: 'eigyo' }));
+  // 「感情8・ロジック2」のような比率を、読みやすく
+  const ratio = s => s.replace(/(感情|ロジック)(\d)/g, '$1$2');
+
+  function show(i) {
+    const [k, yomi, tatoe] = KAN[i], g = ORDER[Math.floor(i / 2)], inyo = i % 2 ? '陰' : '陽', p = D[k];
+    $('result').style.setProperty('--c', COLOR[g]);
+    $('hero').innerHTML = `<p class="label">このお客さまの日干は</p><div class="kan">${k}</div>
+      <h2>${k}（${yomi}）＝${tatoe}</h2><span class="type">${esc(p.brain)}</span>
+      <p class="ess">${esc(p.ess)}</p>`;
+    $('words').innerHTML = `<h3>響く言葉（背中を押す）</h3>
+      ${p.killer.map(t => `<div class="say ok">「${esc(t)}」</div>`).join('')}
+      <h3 style="margin-top:20px">地雷ワード（一瞬で信頼を失う）</h3>
+      ${p.taboo.map(t => { const m = t.match(/^(.*?)（(.*)）$/); return `<div class="say ng">「${esc(m ? m[1] : t)}」${m ? `<small>${esc(m[2])}</small>` : ''}</div>`; }).join('')}`;
+    $('close').innerHTML = `<h3>締め方（クロージング）</h3><p style="margin:0">${esc(ratio(p.closing))}</p>
+      <h3 style="margin-top:20px">話の入り方</h3><p style="margin:0">${esc(p.brainText)}</p>
+      ${p.yes.length ? `<h3 style="margin-top:20px">買う気になったサイン（ここで締める）</h3><ul class="sign">${p.yes.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}`;
+    track('check_done', { tool: 'eigyo', result: k + '_' + tatoe });
+    const url = location.origin + location.pathname;
+    const text = `お客さまの誕生日で、刺さる"決めゼリフ"が変わる。${tatoe}タイプには「${p.killer[0]}」 #経営と陰陽五行`;
+    $('shareX').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url);
+    $('shareLine').href = 'https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text);
+    $('shareX').onclick = () => track('share', { tool: 'eigyo', method: 'x' });
+    $('shareLine').onclick = () => track('share', { tool: 'eigyo', method: 'line' });
+    $('copy').onclick = () => {
+      track('share', { tool: 'eigyo', method: 'copy' });
+      (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject())
+        .then(() => { $('copy').textContent = 'コピーしました'; })
+        .catch(() => { prompt('このリンクをコピーしてください', url); });
+    };
+    $('result').hidden = false;
+    $('hero').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  $('f').addEventListener('submit', e => { e.preventDefault(); show(dayKan(+$('y').value, +$('m').value, +$('d').value)); });
+  $('again').addEventListener('click', () => { $('result').hidden = true; $('copy').textContent = 'リンクをコピー'; $('f').scrollIntoView({ behavior: 'smooth' }); });
+})();
+</script>
+</body>
+</html>
