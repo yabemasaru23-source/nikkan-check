@@ -61,6 +61,8 @@ h3 { font-family: var(--mincho); font-weight: 900; font-size: 1.25rem; margin: 0
 .sign { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 6px; }
 .sign li { background: var(--bg); border-radius: 10px; padding: 8px 12px; font-size: .95rem; }
 .sign li::before { content: "✔ "; color: var(--ok); font-weight: 900; }
+.sign.no li { background: var(--ng-soft); }
+.sign.no li::before { content: "✖ "; color: var(--ng); }
 .locked { background: #fff7e0; border: 2px dashed #e0b23c; }
 .locked p { margin: 0; }
 .locked b.t { display: block; font-family: var(--mincho); font-size: 1.15rem; margin-bottom: 6px; }
@@ -79,7 +81,7 @@ footer { text-align: center; font-size: .8rem; color: var(--ink-soft); padding: 
   <header>
     <span class="kicker">営業が化ける ｜ クロージングの神ワザ（無料）</span>
     <h1>お客さまの誕生日で<br><em>神の一言</em>がわかる</h1>
-    <p class="lead">え、こんなことまでわかるの？<br>お客さまの生年月日を選ぶだけで、神の一言・地雷ワード・締め方が出ます。</p>
+    <p class="lead">え、こんなことまでわかるの？<br>お客さまの生年月日を選ぶだけで、神の一言・地雷ワード・締め方・<b>買うしぐさ／断るしぐさ</b>が出ます。</p>
   </header>
 
   <form class="form" id="f">
@@ -100,7 +102,6 @@ footer { text-align: center; font-size: .8rem; color: var(--ink-soft); padding: 
     <div class="card locked">
       <p><b class="t">🔒 この先は「総合版」で</b>命式アプリの営業編には、このほかに<br>
       ・<b>あえて引く「逆転の一手」</b>（押すほど逃げる人への切り札）<br>
-      ・<b>断る気になったサイン</b>（ここでは押さずに引く）<br>
       ・<b>商材別の実戦クロージング例</b><br>
       ・<b>命式全体から見た「押し」と「引き」のさじ加減</b><br>
       までが入っています。いま、全部をまとめて学べる仕組みを準備しています。</p>
@@ -162,7 +163,8 @@ footer { text-align: center; font-size: .8rem; color: var(--ink-soft); padding: 
       ${p.taboo.map(t => { const m = t.match(/^(.*?)（(.*)）$/); return `<div class="say ng">「${esc(m ? m[1] : t)}」${m ? `<small>${esc(m[2])}</small>` : ''}</div>`; }).join('')}`;
     $('close').innerHTML = `<h3>締め方（クロージング）</h3><p style="margin:0">${esc(ratio(p.closing))}</p>
       <h3 style="margin-top:20px">話の入り方</h3><p style="margin:0">${esc(p.brainText)}</p>
-      ${p.yes.length ? `<h3 style="margin-top:20px">買う気になったサイン（ここで締める）</h3><ul class="sign">${p.yes.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}`;
+      ${p.yes.length ? `<h3 style="margin-top:20px">買う気になったサイン（ここで締める）</h3><ul class="sign">${p.yes.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
+      ${p.no.length ? `<h3 style="margin-top:20px">断る気になったサイン（押さずに引く）</h3><ul class="sign no">${p.no.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}`;
     track('check_done', { tool: 'eigyo', result: k + '_' + tatoe });
     const url = location.origin + location.pathname;
     const text = `お客さまの誕生日で、刺さる"決めゼリフ"が変わる。${tatoe}タイプには「${p.killer[0]}」 #経営と陰陽五行`;
