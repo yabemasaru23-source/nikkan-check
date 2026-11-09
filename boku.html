@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>迷ったときの一枚 ― 経営者のための禅カード｜経営と陰陽五行</title>
+<meta name="description" content="迷っていることを心に決めて、禅カードを1枚引くだけ。カードの言葉と、経営の判断に使うための3つの問いで、あなたの本音に気づく無料ページです。">
+<link rel="canonical" href="https://yabemasaru23-source.github.io/nikkan-check/boku.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="迷ったときの一枚 ― 経営者のための禅カード">
+<meta property="og:description" content="カードを1枚引くだけで、迷いの中にある本音に気づく。無料の禅カード。">
+<meta property="og:url" content="https://yabemasaru23-source.github.io/nikkan-check/boku.html">
+<meta property="og:image" content="https://yabemasaru23-source.github.io/nikkan-check/ogp-boku.png">
+<meta property="og:site_name" content="営業革命！売上倍増コンテンツ集">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<script src="analytics.js"></script>
+<script src="zen-data.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@600;900&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0f2a22; --bg2: #143a2f; --paper: #fbf7ec; --ink: #1f2a25; --ink-soft: #5a6660; --line: #d9cfb3;
+  --gold: #d7b45a; --gold2: #f1d98f; --green: #1f6b4f;
+  --mincho: "Zen Old Mincho", "Yu Mincho", serif;
+  --gothic: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; color: #f4efe0; font-family: var(--gothic); font-size: 17px; line-height: 1.85;
+  background: radial-gradient(ellipse at 50% 0%, #1f5242 0%, var(--bg) 55%, #0a1d17 100%) fixed; }
+.wrap { max-width: 640px; margin: 0 auto; padding: 0 16px 64px; }
+header { text-align: center; padding: 38px 0 10px; }
+.kicker { display: inline-block; padding: 4px 16px; border: 1.5px solid var(--gold); border-radius: 999px; color: var(--gold2); font-weight: 900; font-size: .85rem; letter-spacing: .14em; }
+h1 { font-family: var(--mincho); font-weight: 900; font-size: clamp(1.8rem, 7vw, 2.6rem); line-height: 1.4; margin: 14px 0 8px; }
+h1 em { font-style: normal; color: var(--gold2); }
+.lead { color: #cfd8d2; margin: 0 0 24px; }
+.panel { background: rgba(251, 247, 236, .06); border: 1px solid rgba(215, 180, 90, .45); border-radius: 18px; padding: 22px 18px; }
+.panel label { display: block; font-weight: 700; margin-bottom: 8px; }
+input[type=text] { width: 100%; font: inherit; font-size: 1.05rem; padding: 12px; border-radius: 10px; border: 1px solid rgba(215, 180, 90, .6); background: rgba(0, 0, 0, .25); color: #fff; }
+input::placeholder { color: #9fb0a8; }
+input:focus, button:focus-visible, a:focus-visible { outline: 3px solid var(--gold2); outline-offset: 2px; }
+.go { margin-top: 16px; width: 100%; border: 0; cursor: pointer; font: inherit; font-weight: 900; font-size: 1.15rem; padding: 15px; border-radius: 999px; color: #1b1405;
+  background: linear-gradient(180deg, var(--gold2), var(--gold)); box-shadow: 0 5px 0 #8a6a20, 0 0 24px rgba(215, 180, 90, .35); }
+.go:active { transform: translateY(2px); box-shadow: 0 3px 0 #8a6a20; }
+.privacy { font-size: .78rem; color: #9fb0a8; margin: 12px 0 0; text-align: center; }
+.result { margin-top: 28px; }
+.result[hidden] { display: none; }
+.card { perspective: 1200px; margin: 0 auto 18px; width: min(320px, 86vw); aspect-ratio: 3 / 4.4; }
+.card-in { position: relative; width: 100%; height: 100%; transition: transform .9s cubic-bezier(.2, .7, .2, 1); transform-style: preserve-3d; }
+.card.open .card-in { transform: rotateY(180deg); }
+.face { position: absolute; inset: 0; border-radius: 20px; backface-visibility: hidden; display: grid; place-items: center; text-align: center; padding: 22px; }
+.back { background: repeating-linear-gradient(45deg, #1f5242 0 10px, #184536 10px 20px); border: 3px solid var(--gold); box-shadow: 0 0 30px rgba(215, 180, 90, .35); }
+.back span { font-family: var(--mincho); font-size: 3.2rem; color: var(--gold2); }
+.front { transform: rotateY(180deg); background: var(--paper); color: var(--ink); border: 3px solid var(--gold); box-shadow: 0 0 30px rgba(215, 180, 90, .45); align-content: center; gap: 4px; }
+.front .s { font-size: 3.6rem; line-height: 1; }
+.front .no { font-size: .75rem; color: var(--ink-soft); letter-spacing: .1em; }
+.front .n { font-family: var(--mincho); font-weight: 900; font-size: 2.2rem; line-height: 1.2; color: var(--green); }
+.front .y { font-size: .85rem; color: var(--ink-soft); }
+.front .e { font-family: var(--mincho); font-weight: 900; font-size: 1.15rem; margin-top: 6px; }
+.box { background: var(--paper); color: var(--ink); border-radius: 18px; padding: 22px 20px; margin-bottom: 16px; }
+.box h2 { font-family: var(--mincho); font-weight: 900; font-size: 1.25rem; margin: 0 0 10px; color: var(--green); }
+.box p { margin: 0; }
+.q { list-style: none; padding: 0; margin: 0; counter-reset: q; display: grid; gap: 10px; }
+.q li { counter-increment: q; position: relative; padding: 10px 12px 10px 44px; background: #f1ead6; border-radius: 12px; }
+.q li::before { content: counter(q); position: absolute; left: 12px; top: 10px; width: 24px; height: 24px; border-radius: 50%; background: var(--green); color: #fff; font-weight: 900; font-size: .85rem; display: grid; place-items: center; }
+.ask { margin-bottom: 14px; padding: 10px 14px; border-left: 5px solid var(--gold); background: #f1ead6; border-radius: 0 10px 10px 0; font-weight: 700; }
+.share { display: flex; gap: 10px; flex-wrap: wrap; }
+.share a, .share button { flex: 1; min-width: 130px; text-align: center; text-decoration: none; font: inherit; font-weight: 900; padding: 12px; border-radius: 999px; border: 0; cursor: pointer; color: #fff; }
+.share .x { background: #111; } .share .line { background: #06C755; } .share .copy { background: #5a6660; }
+.links { text-align: center; }
+.links a { display: inline-block; margin: 4px 8px; color: var(--green); font-weight: 900; }
+.again { display: block; margin: 0 auto; background: none; border: 0; color: #cfd8d2; text-decoration: underline; font: inherit; cursor: pointer; }
+.note-s { font-size: .78rem; color: #9fb0a8; line-height: 1.7; }
+footer { text-align: center; font-size: .8rem; color: #9fb0a8; padding: 20px 16px 40px; }
+@media (prefers-reduced-motion: reduce) { .card-in { transition: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="kicker">経営と陰陽五行 ｜ 卜（ぼく）の道具</span>
+    <h1>迷ったときの<br><em>一枚</em></h1>
+    <p class="lead">迷っていることを、ひとつだけ心に決めてください。<br>カードは答えを決めません。あなたの本音に気づかせてくれます。</p>
+  </header>
+
+  <form class="panel" id="f">
+    <label for="ask">いま迷っていること（書かなくてもOK）</label>
+    <input type="text" id="ask" maxlength="60" placeholder="例：新しいサービスを、今月はじめるべきか">
+    <button class="go" type="submit">カードを1枚引く</button>
+    <p class="privacy">書いた内容は、このページの中だけで使います。どこにも送られません。</p>
+  </form>
+
+  <div class="result" id="result" hidden aria-live="polite">
+    <div class="card" id="card"><div class="card-in">
+      <div class="face back"><span>卜</span></div>
+      <div class="face front" id="front"></div>
+    </div></div>
+    <div class="box" id="msg"></div>
+    <div class="box">
+      <h2>決める前に、3つだけ自分に聞いてください</h2>
+      <ol class="q">
+        <li>カードを見た瞬間、<b>ホッとしましたか？ それとも、がっかりしましたか？</b> その気持ちが、あなたの本音です。</li>
+        <li>カードの言葉を、いまの迷いに当てはめると、<b>何をすること</b>になりますか？</li>
+        <li>それでも決めるなら、どちらを選びますか？ <b>その理由を、ひとことで</b>書いてみてください。</li>
+      </ol>
+    </div>
+    <div class="box">
+      <h2>大きな決断は「命」とセットで</h2>
+      <p>卜は「目の前の選択」の後押しが得意な道具です。新規出店や採用のような大きな決断は、あなたの年のテーマ（攻める年・整える年）とあわせて考えてください。</p>
+      <p style="margin-top:10px"><a href="nen.html" style="color:var(--green);font-weight:900">今年は攻める年？整える年？ をチェック →</a></p>
+    </div>
+    <div class="box">
+      <h2>引いたカードをシェアする</h2>
+      <div class="share">
+        <a class="x" id="shareX" target="_blank" rel="noopener">Xでシェア</a>
+        <a class="line" id="shareLine" target="_blank" rel="noopener">LINEで送る</a>
+        <button class="copy" type="button" id="copy">リンクをコピー</button>
+      </div>
+      <p class="note-s" style="margin-top:10px;color:#5a6660">シェアされるのはカードの名前だけです。書いた迷いは送られません。</p>
+    </div>
+    <div class="box links">
+      <a href="./">日干チェック</a><a href="aisho.html">相性チェック</a><a href="nen.html">年の巡りチェック</a><a href="eigyo.html">決めゼリフチェック</a><br>
+      <a href="https://note.com/lucky_panda5334/m/md9f7d3ee7413">連載「経営と陰陽五行」を読む →</a>
+    </div>
+    <button class="again" type="button" id="again">別の迷いで、もう一度引く</button>
+  </div>
+
+  <p class="note-s" style="margin-top:28px">※ カードは毎回、偶然に選ばれます。未来を予言したり、決断を代わりに下したりするものではありません。最後に決めるのは、あなたです。</p>
+</div>
+<footer>営業革命！売上倍増コンテンツ集 ｜ 経営と陰陽五行</footer>
+
+<script>
+(() => {
+  'use strict';
+  const Z = window.ZEN_CARDS;
+  const track = (...a) => { if (typeof window.qmTrack === 'function') window.qmTrack(...a); };
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
+  // 偶然に1枚（暗号用の乱数で、偏りなく選ぶ）
+  function pick() {
+    const n = Z.length, max = Math.floor(0x100000000 / n) * n, a = new Uint32Array(1);
+    do { crypto.getRandomValues(a); } while (a[0] >= max);
+    return a[0] % n;
+  }
+  function draw(ask) {
+    const i = pick(), c = Z[i];
+    $('card').classList.remove('open');
+    $('front').innerHTML = `<div class="s">${c.s}</div><div class="no">NO. ${String(i + 1).padStart(2, '0')} / ${Z.length}</div>
+      <div class="n">${esc(c.n)}</div><div class="y">${esc(c.y)}</div><div class="e">「${esc(c.e)}」</div>`;
+    $('msg').innerHTML = (ask ? `<div class="ask">あなたの迷い：${esc(ask)}</div>` : '') +
+      `<h2>「${esc(c.n)}」のメッセージ</h2><p>${esc(c.g)}</p>`;
+    $('result').hidden = false;
+    $('card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setTimeout(() => $('card').classList.add('open'), 350);
+    track('check_done', { tool: 'boku', result: c.n });
+    const url = location.origin + location.pathname;
+    const text = `迷ったときの一枚。わたしが引いたのは「${c.n}」――「${c.e}」 #経営と陰陽五行`;
+    $('shareX').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url);
+    $('shareLine').href = 'https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text);
+    $('shareX').onclick = () => track('share', { tool: 'boku', method: 'x' });
+    $('shareLine').onclick = () => track('share', { tool: 'boku', method: 'line' });
+    $('copy').onclick = () => {
+      track('share', { tool: 'boku', method: 'copy' });
+      (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject())
+        .then(() => { $('copy').textContent = 'コピーしました'; })
+        .catch(() => { prompt('このリンクをコピーしてください', url); });
+    };
+  }
+  $('f').addEventListener('submit', e => { e.preventDefault(); draw($('ask').value.trim()); });
+  $('again').addEventListener('click', () => { $('result').hidden = true; $('ask').value = ''; $('copy').textContent = 'リンクをコピー'; $('f').scrollIntoView({ behavior: 'smooth' }); $('ask').focus(); });
+})();
+</script>
+</body>
+</html>
